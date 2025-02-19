@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/"><div class="nav-item" >HOME</div></a>
+        <a href="/food"><div class="nav-item" >FOOD</div></a>
+        <a href="/activities"><div class="nav-item" >ACTIVITIES</div></a>
+        <a href="/lodging"><div class="nav-item" >LODGING</div></a>
+        <a href="/transport"><div class="nav-item" >TRANSPORT</div></a>
+    </nav>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="section section1">
+                {% block img %}
+                <img src="static/jungle.jpg" height="450px"/>
+                {% endblock %}
+            </div>
+            <div class="section section2">
+                {% block content %} 
+                Taniti is a small, tropical island in the Pacific. While the island has an
+                area of less than 500 square miles, the terrain is varied and includes
+                both sandy and rocky beaches, a small but safe harbor, lush tropical
+                rainforests, and a mountainous interior that includes a small, active
+                volcano. Taniti has an indigenous population of about 20,000. Until a
+                recent increase in tourism, most of the Tanitian economy was
+                dominated by fishing or agriculture.
+                {% endblock %}</div>
+        </div>
+        <div class="section section3">
+
+            <div id="head">  FAQ </div><br>
+            <ul>
+                {% block faq %}
+                <li>Many younger Tanitians speak fluent English. Very little English is spoken
+                    in rural areas, especially by the older residents.</li><br>
+                <li>There is one hospital and several clinics. The hospital has many
+                    multilingual employees.</li><br>
+                <li>Taniti enjoys a large number of national holidays, and many tourist
+                    attractions and restaurants will be closed on holidays, so visitors should
+                    plan accordingly.</li><br>
+                <li>Violent crime is very rare in Taniti, but as tourism increases, there are
+                    more reports of pickpocketing and other petty crimes.</li><br>
+                <li>Taniti uses the U.S. dollar as its currency, but many businesses will also
+                    accept euros and yen. Several banks facilitate currency exchange, and
+                    many businesses accept major credit cards.</li>
+                {% endblock %}
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
